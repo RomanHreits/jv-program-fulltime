@@ -7,20 +7,15 @@ public class Circle extends Figure {
     }
 
     public void draw() {
-        System.out.println("The circle is drawn");
+        System.out.println("The circle is drawn.\nCircle, area: " + getArea() + " sq.units, " +
+                "radius: " + radius + " units, color: " + getColor());
     }
 
     public double getArea() {
-        return 3.14*Math.pow(radius, 2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     public Color getColor() {
         return color;
-    }
-
-    @Override
-    public String toString() {
-        return "Фигура: круг, площадь: " + getArea() + " кв. ед., " +
-                "радиус: " + radius + " ед., цвет: " + color;
     }
 }
